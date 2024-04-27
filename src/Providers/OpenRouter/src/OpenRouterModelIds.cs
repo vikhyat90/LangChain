@@ -7,12 +7,6 @@ public enum OpenRouterModelIds
 {
 
         /// <summary>
-        /// Soliloquy-L3 is a fast, highly capable roleplaying model designed for immersive, dynamic experiences. Trained on over 250 million tokens of roleplaying data, Soliloquy-L3 has a vast knowledge base, rich literary expression, and support for up to 24k context length. It outperforms existing ~13B models, delivering enhanced roleplaying capabilities.  <br/>
-        /// Usage of this model is subject to Meta's Acceptable Use Policy.  <br/>
-        /// </summary>
-        LynnLlama3Soliloquy8B,
-        
-        /// <summary>
         /// The Capybara series is a collection of datasets and models made by fine-tuning on data created by Nous, mostly in-house.  <br/>
         /// V1.9 uses unalignment techniques for more consistent and dynamic control. It also leverages a significantly better foundation model, Mistral 7B.  <br/>
         /// Note: this is a free, rate-limited version of this model. Outputs may be cached. Read about rate limits here.  <br/>
@@ -83,22 +77,9 @@ public enum OpenRouterModelIds
         NeuralChat7BV31,
         
         /// <summary>
-        /// LLaVA is a large multimodal model that combines a vision encoder and Vicuna for general-purpose visual and language understanding, achieving impressive chat capabilities mimicking GPT-4 and setting a new state-of-the-art accuracy on Science QA  <br/>
-        /// #multimodal  <br/>
+        /// One of the highest performing and most popular fine-tunes of Llama 2 13B, with rich descriptions and roleplay. #merge  <br/>
         /// </summary>
-        Llava13B,
-        
-        /// <summary>
-        /// This vision-language model builds on innovations from the popular OpenHermes-2.5 model, by Teknium. It adds vision support, and is trained on a custom dataset enriched with function calling  <br/>
-        /// This project is led by qnguyen3 and teknium.  <br/>
-        /// #multimodal  <br/>
-        /// </summary>
-        NousHermes2Vision7BAlpha,
-        
-        /// <summary>
-        /// A 13 billion parameter language model from Meta, fine tuned for chat completions  <br/>
-        /// </summary>
-        MetaLlamaV213BChat,
+        Mythomax13B,
         
         /// <summary>
         /// A blend of the new Pygmalion-13b and MythoMax. #merge  <br/>
@@ -170,11 +151,6 @@ public enum OpenRouterModelIds
         MancerWeaverAlpha,
         
         /// <summary>
-        /// A state-of-the-art language model fine-tuned on over 300k instructions by Nous Research, with Teknium and Emozilla leading the fine tuning process.  <br/>
-        /// </summary>
-        NousHermes13B,
-        
-        /// <summary>
         /// The Capybara series is a collection of datasets and models made by fine-tuning on data created by Nous, mostly in-house.  <br/>
         /// V1.9 uses unalignment techniques for more consistent and dynamic control. It also leverages a significantly better foundation model, Mistral 7B.  <br/>
         /// </summary>
@@ -199,12 +175,6 @@ public enum OpenRouterModelIds
         /// Trained on 900k instructions, surpasses all previous versions of Hermes 13B and below, and matches 70B on some benchmarks. Hermes 2 has strong multiturn chat skills and system prompt capabilities.  <br/>
         /// </summary>
         OpenHermes2Mistral7B,
-        
-        /// <summary>
-        /// A continuation of OpenHermes 2 model, trained on additional code datasets.  <br/>
-        /// Potentially the most interesting finding from training on a good ratio (est. of around 7-14% of the total dataset) of code instruction was that it has boosted several non-code benchmarks, including TruthfulQA, AGIEval, and GPT4All suite. It did however reduce BigBench benchmark score, but the net gain overall is significant.  <br/>
-        /// </summary>
-        OpenHermes25Mistral7B,
         
         /// <summary>
         /// A recreation trial of the original MythoMax-L2-B13 but with updated models. #merge  <br/>
@@ -274,6 +244,13 @@ public enum OpenRouterModelIds
         /// To read more about the model release, click here. Usage of this model is subject to Meta's Acceptable Use Policy.  <br/>
         /// </summary>
         MetaLlama370BInstruct,
+        
+        /// <summary>
+        /// A pretrained generative Sparse Mixture of Experts, by Mistral AI, for chat and instruction use. Incorporates 8 experts (feed-forward networks) for a total of 47 billion parameters.  <br/>
+        /// Instruct model fine-tuned by Mistral. #moe  <br/>
+        /// Note: this is a higher-throughput version of this model, and may have higher prices and slightly different outputs.  <br/>
+        /// </summary>
+        Mixtral8X7BInstructNitro,
         
         /// <summary>
         /// A fine-tune of Mistral using the OpenOrca dataset. First 7B model to beat all other models <30B.  <br/>
@@ -433,6 +410,12 @@ public enum OpenRouterModelIds
         PerplexitySonar8X7BOnline,
         
         /// <summary>
+        /// The first commercially permissive OSS LLaVA model.  <br/>
+        /// This vision-language model was trained entirely on OSS LLM generated instruction following data.  <br/>
+        /// </summary>
+        Firellava13B,
+        
+        /// <summary>
         /// Claude 3 Opus is Anthropic's most powerful model for highly complex tasks. It boasts top-level performance, intelligence, fluency, and understanding.  <br/>
         /// See the launch announcement and benchmark results here  <br/>
         /// #multimodal  <br/>
@@ -529,9 +512,19 @@ public enum OpenRouterModelIds
         AnthropicClaudeInstantV1SelfModerated,
         
         /// <summary>
+        /// A 13 billion parameter language model from Meta, fine tuned for chat completions  <br/>
+        /// </summary>
+        MetaLlamaV213BChat,
+        
+        /// <summary>
         /// The flagship, 70 billion parameter language model from Meta, fine tuned for chat completions. Llama 2 is an auto-regressive language model that uses an optimized transformer architecture. The tuned versions use supervised fine-tuning (SFT) and reinforcement learning with human feedback (RLHF) to align to human preferences for helpfulness and safety.  <br/>
         /// </summary>
         MetaLlamaV270BChat,
+        
+        /// <summary>
+        /// A state-of-the-art language model fine-tuned on over 300k instructions by Nous Research, with Teknium and Emozilla leading the fine tuning process.  <br/>
+        /// </summary>
+        NousHermes13B,
         
         /// <summary>
         /// This model is trained on the Yi-34B model for 3 epochs on the Capybara dataset. It's the first 34B Nous model and first 200K context length Nous model.  <br/>
@@ -557,9 +550,10 @@ public enum OpenRouterModelIds
         Mistral7BInstruct,
         
         /// <summary>
-        /// One of the highest performing and most popular fine-tunes of Llama 2 13B, with rich descriptions and roleplay. #merge  <br/>
+        /// A continuation of OpenHermes 2 model, trained on additional code datasets.  <br/>
+        /// Potentially the most interesting finding from training on a good ratio (est. of around 7-14% of the total dataset) of code instruction was that it has boosted several non-code benchmarks, including TruthfulQA, AGIEval, and GPT4All suite. It did however reduce BigBench benchmark score, but the net gain overall is significant.  <br/>
         /// </summary>
-        Mythomax13B,
+        OpenHermes25Mistral7B,
         
         /// <summary>
         /// OpenChat is a library of open-source language models, fine-tuned with "C-RLFT (Conditioned Reinforcement Learning Fine-Tuning)" - a strategy inspired by offline reinforcement learning. It has been trained on mixed-quality data without preference labels.  <br/>
@@ -702,17 +696,16 @@ public enum OpenRouterModelIds
         MistralMixtral8X22bInstruct,
         
         /// <summary>
+        /// Soliloquy-L3 is a fast, highly capable roleplaying model designed for immersive, dynamic experiences. Trained on over 250 million tokens of roleplaying data, Soliloquy-L3 has a vast knowledge base, rich literary expression, and support for up to 24k context length. It outperforms existing ~13B models, delivering enhanced roleplaying capabilities.  <br/>
+        /// Usage of this model is subject to Meta's Acceptable Use Policy.  <br/>
+        /// </summary>
+        LynnLlama3Soliloquy8B,
+        
+        /// <summary>
         /// Zephyr is a series of language models that are trained to act as helpful assistants. Zephyr-7B-β is the second model in the series, and is a fine-tuned version of mistralai/Mistral-7B-v0.1 that was trained on a mix of publicly available, synthetic datasets using Direct Preference Optimization (DPO).  <br/>
         /// Note: this is a free, rate-limited version of this model. Outputs may be cached. Read about rate limits here.  <br/>
         /// </summary>
         HuggingFaceZephyr7BFree,
-        
-        /// <summary>
-        /// A pretrained generative Sparse Mixture of Experts, by Mistral AI, for chat and instruction use. Incorporates 8 experts (feed-forward networks) for a total of 47 billion parameters.  <br/>
-        /// Instruct model fine-tuned by Mistral. #moe  <br/>
-        /// Note: this is a higher-throughput version of this model, and may have higher prices and slightly different outputs.  <br/>
-        /// </summary>
-        Mixtral8X7BInstructNitro,
         
         /// <summary>
         /// The flagship, 70 billion parameter language model from Meta, fine tuned for chat completions. Llama 2 is an auto-regressive language model that uses an optimized transformer architecture. The tuned versions use supervised fine-tuning (SFT) and reinforcement learning with human feedback (RLHF) to align to human preferences for helpfulness and safety.  <br/>
@@ -777,6 +770,19 @@ public enum OpenRouterModelIds
         /// Note: this is a higher-throughput version of this model, and may have higher prices and slightly different outputs.  <br/>
         /// </summary>
         MetaLlama370BInstructNitro,
+        
+        /// <summary>
+        /// LLaVA is a large multimodal model that combines a vision encoder and Vicuna for general-purpose visual and language understanding, achieving impressive chat capabilities mimicking GPT-4 and setting a new state-of-the-art accuracy on Science QA  <br/>
+        /// #multimodal  <br/>
+        /// </summary>
+        Llava13B,
+        
+        /// <summary>
+        /// This vision-language model builds on innovations from the popular OpenHermes-2.5 model, by Teknium. It adds vision support, and is trained on a custom dataset enriched with function calling  <br/>
+        /// This project is led by qnguyen3 and teknium.  <br/>
+        /// #multimodal  <br/>
+        /// </summary>
+        NousHermes2Vision7BAlpha,
         
         /// <summary>
         /// This model is currently powered by Mistral-7B-v0.2, and incorporates a "better" fine-tuning than Mistral 7B, inspired by community work. It's best used for large batch processing tasks where cost is a significant factor but reasoning capabilities are not crucial.  <br/>
