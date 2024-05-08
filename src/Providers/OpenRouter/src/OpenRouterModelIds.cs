@@ -61,6 +61,14 @@ public enum OpenRouterModelIds
     GoogleGemma7BFree,
 
     /// <summary>
+    /// Meta's latest class of model (Llama 3) launched with a variety of sizes and flavors. This 8B instruct-tuned version was optimized for high quality dialogue usecases.  <br/>
+    /// It has demonstrated strong performance compared to leading closed-source models in human evaluations.  <br/>
+    /// To read more about the model release, click here. Usage of this model is subject to Meta's Acceptable Use Policy.  <br/>
+    /// Note: this is a free, rate-limited version of this model. Outputs may be cached. Read about rate limits here.  <br/>
+    /// </summary>
+    MetaLlama38BInstructFree,
+
+    /// <summary>
     /// The v2 of Psyfighter - a merged model created by the KoboldAI community members Jeb Carter and TwistedShadows, made possible thanks to the KoboldAI merge request service.  <br/>
     /// The intent was to add medical data to supplement the model's fictional ability with more details on anatomy and mental states. This model should not be used for medical advice or therapy because of its high likelihood of pulling in fictional data.  <br/>
     /// It's a merge between:  <br/>
@@ -126,6 +134,13 @@ public enum OpenRouterModelIds
     Fimbulvetr11BV2,
 
     /// <summary>
+    /// The NeverSleep team is back, with a Llama 3 8B finetune trained on their curated roleplay data. Striking a balance between eRP and RP, Lumimaid was designed to be serious, yet uncensored when necessary.  <br/>
+    /// To enhance it's overall intelligence and chat capability, roughly 40% of the training data was not roleplay. This provides a breadth of knowledge to access, while still keeping roleplay as the primary strength.  <br/>
+    /// Usage of this model is subject to Meta's Acceptable Use Policy.  <br/>
+    /// </summary>
+    Llama3Lumimaid8B,
+
+    /// <summary>
     /// A recreation trial of the original MythoMax-L2-B13 but with updated models. #merge  <br/>
     /// Note: this is an extended-context version of this model. It may have higher prices and different outputs.  <br/>
     /// </summary>
@@ -144,6 +159,14 @@ public enum OpenRouterModelIds
     /// Note: this is an extended-context version of this model. It may have higher prices and different outputs.  <br/>
     /// </summary>
     MetaLlama38BInstructExtended,
+
+    /// <summary>
+    /// The NeverSleep team is back, with a Llama 3 8B finetune trained on their curated roleplay data. Striking a balance between eRP and RP, Lumimaid was designed to be serious, yet uncensored when necessary.  <br/>
+    /// To enhance it's overall intelligence and chat capability, roughly 40% of the training data was not roleplay. This provides a breadth of knowledge to access, while still keeping roleplay as the primary strength.  <br/>
+    /// Usage of this model is subject to Meta's Acceptable Use Policy.  <br/>
+    /// Note: this is an extended-context version of this model. It may have higher prices and different outputs.  <br/>
+    /// </summary>
+    Llama3Lumimaid8BExtended,
 
     /// <summary>
     /// An attempt to recreate Claude-style verbosity, but don't expect the same level of coherence or memory. Meant for use in roleplay/narrative situations.  <br/>
@@ -237,13 +260,6 @@ public enum OpenRouterModelIds
     /// The model prior to DPO was trained on 1,000,000 instructions/chats of GPT-4 quality or better, primarily synthetic data as well as other high quality datasets.  <br/>
     /// </summary>
     NousHermes2Mistral7BDpo,
-
-    /// <summary>
-    /// Meta's latest class of model (Llama 3) launched with a variety of sizes and flavors. This 70B instruct-tuned version was optimized for high quality dialogue usecases.  <br/>
-    /// It has demonstrated strong performance compared to leading closed-source models in human evaluations.  <br/>
-    /// To read more about the model release, click here. Usage of this model is subject to Meta's Acceptable Use Policy.  <br/>
-    /// </summary>
-    MetaLlama370BInstruct,
 
     /// <summary>
     /// Arctic is a dense-MoE Hybrid transformer architecture pre-trained from scratch by the Snowflake AI Research Team. Arctic combines a 10B dense transformer model with a residual 128x3.66B MoE MLP resulting in 480B total and 17B active parameters chosen using a top-2 gating.  <br/>
@@ -652,6 +668,13 @@ public enum OpenRouterModelIds
     MetaLlama38BInstruct,
 
     /// <summary>
+    /// Meta's latest class of model (Llama 3) launched with a variety of sizes and flavors. This 70B instruct-tuned version was optimized for high quality dialogue usecases.  <br/>
+    /// It has demonstrated strong performance compared to leading closed-source models in human evaluations.  <br/>
+    /// To read more about the model release, click here. Usage of this model is subject to Meta's Acceptable Use Policy.  <br/>
+    /// </summary>
+    MetaLlama370BInstruct,
+
+    /// <summary>
     /// WizardLM-2 8x22B is Microsoft AI's most advanced Wizard model. It demonstrates highly competitive performance compared to leading proprietary models, and it consistently outperforms all existing state-of-the-art opensource models.  <br/>
     /// It is an instruct finetune of Mixtral 8x22B.  <br/>
     /// To read more about the model release, click here.  <br/>
@@ -685,10 +708,10 @@ public enum OpenRouterModelIds
     MistralMixtral8X22bInstruct,
 
     /// <summary>
-    /// Soliloquy-L3 is a fast, highly capable roleplaying model designed for immersive, dynamic experiences. Trained on over 250 million tokens of roleplaying data, Soliloquy-L3 has a vast knowledge base, rich literary expression, and support for up to 24k context length. It outperforms existing ~13B models, delivering enhanced roleplaying capabilities.  <br/>
+    /// Soliloquy-L3 v2 is a fast, highly capable roleplaying model designed for immersive, dynamic experiences. Trained on over 250 million tokens of roleplaying data, Soliloquy-L3 has a vast knowledge base, rich literary expression, and support for up to 24k context length. It outperforms existing ~13B models, delivering enhanced roleplaying capabilities.  <br/>
     /// Usage of this model is subject to Meta's Acceptable Use Policy.  <br/>
     /// </summary>
-    LynnLlama3Soliloquy8B,
+    LynnLlama3Soliloquy8BV2,
 
     /// <summary>
     /// Zephyr is a series of language models that are trained to act as helpful assistants. Zephyr-7B-β is the second model in the series, and is a fine-tuned version of mistralai/Mistral-7B-v0.1 that was trained on a mix of publicly available, synthetic datasets using Direct Preference Optimization (DPO).  <br/>
