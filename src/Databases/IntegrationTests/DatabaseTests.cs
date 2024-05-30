@@ -189,6 +189,7 @@ public partial class DatabaseTests
     [TestCase(SupportedDatabase.OpenSearch)]
     [TestCase(SupportedDatabase.Postgres)]
     [TestCase(SupportedDatabase.SqLite)]
+    [TestCase(SupportedDatabase.Mongo)]
     public async Task SimilaritySearch_Ok(SupportedDatabase database)
     {
         await using var environment = await StartEnvironmentForAsync(database);
@@ -220,6 +221,7 @@ public partial class DatabaseTests
     [TestCase(SupportedDatabase.OpenSearch)]
     [TestCase(SupportedDatabase.Postgres)]
     [TestCase(SupportedDatabase.SqLite)]
+    [TestCase(SupportedDatabase.Mongo)]
     public async Task SimilaritySearchByVector_Ok(SupportedDatabase database)
     {
         await using var environment = await StartEnvironmentForAsync(database);
@@ -247,6 +249,7 @@ public partial class DatabaseTests
     [TestCase(SupportedDatabase.OpenSearch)]
     [TestCase(SupportedDatabase.Postgres)]
     [TestCase(SupportedDatabase.SqLite)]
+    [TestCase(SupportedDatabase.Mongo)]
     public async Task SimilaritySearchWithScores_Ok(SupportedDatabase database)
     {
         await using var environment = await StartEnvironmentForAsync(database);
